@@ -22,30 +22,15 @@ Logistic Regression saw an even more significant improvement (~7.5x faster), dem
 
 
 
-2\. The Accuracy Paradox (Noise Reduction)
-
-
-
+The Accuracy Paradox (Noise Reduction)
 Counterintuitively, reducing the amount of data actually increased accuracy in both cases:
-
-
-
-&nbsp;   kNN: +0.65% increase
-
-
-
-&nbsp;   Logistic Regression: +2.25% increase
-
+kNN: +0.65% increase
+Logistic Regression: +2.25% increase
 
 
 Why? The original MNIST images contain "noise" (randomly lit pixels in the background or slight variations in writing style). PCA acts as a denoising filter. By keeping only the top components that explain 90% of the variance, we discard the "junk" data, allowing the classifiers to focus on the essential shapes and structures of the digits.
 
-
-
-3\. Handling the "Curse of Dimensionality"
-
-
-
+Handling the "Curse of Dimensionality"
 This project proves that the Curse of Dimensionality (where models perform worse and slower as more features are added) is a real challenge in Image Processing. PCA successfully mitigated this by transforming 784 raw pixels into a compact feature set, proving that:
 
 
@@ -59,8 +44,6 @@ This project proves that the Curse of Dimensionality (where models perform worse
 
 
 Summary Conclusion
-
-
 
 For the MNIST dataset, PCA is not just a compression tool—it is a performance enhancer. The best overall performance was achieved by the kNN model on PCA-reduced data, offering a superior balance of high accuracy (95.40%) and rapid execution.
 
